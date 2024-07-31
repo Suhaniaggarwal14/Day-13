@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Data</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1>Registered User Data</h1>
+
+    <table id="userTable">
+        <thead>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>User Name</th>
+                <th>Password</th>
+                <th>Confirm Password</th>
+                <th>Email</th>
+                <th>Mobile</th>
+                <th>Date of Birth</th>
+                <th>Gender</th>
+                <th>SkillSet</th>
+                <th>Photo</th>
+                <th>Profile</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- User data will be appended here -->
+        </tbody>
+    </table>
+    <script>
+        // Function to retrieve URL parameters
+        function getURLParameters() {
+            const params = new URLSearchParams(window.location.search);
+            return {
+                firstname: params.get('first name'),
+                lastname: params.get('last name'),
+                username: params.get('user name'),
+                password: params.get('password'),
+                confirmpassword: params.get('confirm password'),
+                email: params.get('email'),
+                mobile: params.get('mobile'),
+                dateofbirth: params.get('date of birth'),
+                gender: params.get('gender'),
+                skillset: params.get('skillset'),
+                photo: params.get('photo'),
+                profile: params.get('profile')
+            };
+        }
+        // Function to display user data in the table
+//         function displayUserData() {
+//             const { firstname,lastname,username,password,confirmpassword, email,mobile,dateofbirth,gender,skillset,photo,profile } = getURLParameters();
+            
+//             if (firstname && lastname && username && password && confirmpassword && email && mobile && dateofbirth && gender && skillset && photo && profile) {
+//                 const newRow = document.createElement('tr');
+//                 newRow.innerHTML = `<td>${firstname}</td><td>${lastname}</td><td>${username}</td><td>${password}</td><td>${confirmpassword}</td><td>${email}</td><td>${mobile}</td><td>${dateofbirth}</td><td>${gender}</td><td>${skillset}</td><td>${photo}</td><td>${profile}</td>`;
+//                 document.querySelector('#userTable tbody').appendChild(newRow);
+//             } else {
+//                 alert('No user data found.');
+//             }
+//             // Call the function to display user data on page load
+//         displayUserData();
+//     </script>
+//         }
+
+    
+// </body>
+// </html>

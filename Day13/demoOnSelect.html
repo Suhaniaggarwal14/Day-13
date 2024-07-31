@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <select name="qual">
+            <option value="MCA">MCA</option>
+            <option value="BCA>BCA</option>
+            <option value="Bte">Btech</option>
+        </select>
+        <button type="button" onclick="readSelected()"></button>
+        <script>
+            function readSelected(){
+                let selectedText=document.getElementsByName('qual')
+                for (var i=0; i<selectedText.length;i++)
+            // if(checkText[i].checked)
+                if(selectedText[i].selected)
+                console.log(selectedText[i].value)
+
+            }
+        </script>
+    </form>
+</body>
+</html>
